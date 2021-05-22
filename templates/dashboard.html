@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+<table border="1">
+    <tr><td colspan="4"><h1> Posts</h1></td></tr>
+    <tr>
+        <th>post_date</th><th>Author</th><th>Title</th><th>Content</th>
+    </tr>
+    {% for p in posts %}
+    <tr>
+        <td>{{p.post_date}}</td>
+        <td>{{p.author}}</td>
+        <td>{{p.title}}</td>
+
+        <td><a href="'/post/{{p.date}}">View_post</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<a href="/add_post">Add a new Post</a>
+<a href="/delete_post">Delete Post</a>
+<a href="/edit_post">Edit Post</a>
+
+</body>
+</html>

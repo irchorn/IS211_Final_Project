@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>View Posts</title>
+</head>
+<body><h1> Display Posts </h1>
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>post_date</th>
+        <th>author</th>
+        <th>title</th>
+        <th>content</th>
+    </tr>
+
+        {% for item in display_posts %}
+        <tr>
+            <td>{{item.id}</td>
+            <td>{{item.post_date}}</td>
+            <td>{{item.author}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.content}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
